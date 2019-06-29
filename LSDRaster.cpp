@@ -97,7 +97,7 @@
 #include <map>
 #include <math.h>
 #include <string.h>
-#include <omp.h>
+//#include <omp.h>
 #include "TNT/tnt.h"
 #include "TNT/jama_lu.h"
 #include "TNT/jama_eig.h"

@@ -5,9 +5,10 @@ CFLAGS=-c -Wall -O3
 OFLAGS = -Wall -O3
 LDFLAGS= -Wall
 SOURCES=roughness_metrics_driver.cpp ../LSDIndexRaster.cpp ../LSDRaster.cpp ../LSDStatsTools.cpp ../LSDShapeTools.cpp
-LIBS= -lm -lstdc++ -lfftw3
+LIBS= -lm -lstdc++ 
+# -lfftw3
 OBJECTS=$(SOURCES:.cpp=.o)
-EXECUTABLE=roughness_metrics_driver.out
+EXECUTABLE=roughness_metrics_driver
 
 all: $(SOURCES) $(EXECUTABLE)
 
@@ -16,3 +17,7 @@ $(EXECUTABLE): $(OBJECTS)
 
 .cpp.o:
 	$(CC) $(CFLAGS) $< -o $@
+
+clean:
+	rm -rf *.o 
+	rm -rf ../*.o 
